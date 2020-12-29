@@ -21,6 +21,12 @@ gem 'webpacker', '~> 4.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# Integration
+gem 'typhoeus', '~> 1.4'
+
+# Parsing
+gem 'oj', '~> 3.10'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -31,13 +37,14 @@ group :development do
   gem 'listen', '~> 3.2'
   gem 'web-console', '>= 3.3.0'
 
+  # Linters
   gem 'brakeman', '~> 4.8', require: false
-  gem 'bundler-audit', require: false
+  gem 'bundler-audit', '~> 0.7', require: false
   gem 'lefthook', '~> 0.7', require: false
-  gem 'rubocop', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
+  gem 'rubocop', '~> 1.7', require: false
+  gem 'rubocop-performance', '~> 1.9', require: false
+  gem 'rubocop-rails', '~> 2.9', require: false
+  gem 'rubocop-rspec', '~> 2.1', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

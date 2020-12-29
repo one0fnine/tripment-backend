@@ -1,0 +1,139 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=parse&format=json&page=Medical_procedure&prop=links&section=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/json
+      Charset:
+      - utf-8
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Tue, 29 Dec 2020 19:47:19 GMT
+      Server:
+      - mw1357.eqiad.wmnet
+      X-Content-Type-Options:
+      - nosniff
+      P3p:
+      - CP="See https://en.wikipedia.org/wiki/Special:CentralAutoLogin/P3P for more
+        info."
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      X-Request-Id:
+      - X@uHxwpAMMcAAZ2ioicAAAAT
+      Content-Type:
+      - application/json; charset=utf-8
+      Age:
+      - '0'
+      X-Cache:
+      - cp3054 miss, cp3062 pass
+      X-Cache-Status:
+      - pass
+      Server-Timing:
+      - cache;desc="pass"
+      Strict-Transport-Security:
+      - max-age=106384710; includeSubDomains; preload
+      Report-To:
+      - '{ "group": "wm_nel", "max_age": 86400, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      Nel:
+      - '{ "report_to": "wm_nel", "max_age": 86400, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      Set-Cookie:
+      - GeoIP=RU:UD:Izhevsk:56.85:53.23:v4; Path=/; secure; Domain=.wikipedia.org
+      - WMF-Last-Access-Global=29-Dec-2020;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Sat,
+        30 Jan 2021 12:00:00 GMT
+      - WMF-Last-Access=29-Dec-2020;Path=/;HttpOnly;secure;Expires=Sat, 30 Jan 2021
+        12:00:00 GMT
+      X-Client-Ip:
+      - 92.55.29.117
+      Accept-Ranges:
+      - bytes
+    body:
+      encoding: UTF-8
+      string: '{"parse":{"title":"Medical procedure","pageid":8210888,"links":[{"ns":14,"exists":"","*":"Category:Articles
+        with unsourced statements from November 2016"},{"ns":0,"exists":"","*":"Ablation"},{"ns":0,"exists":"","*":"Acupuncture"},{"ns":0,"exists":"","*":"Amputation"},{"ns":0,"exists":"","*":"Angiography"},{"ns":0,"exists":"","*":"Animal-Assisted
+        Therapy"},{"ns":0,"exists":"","*":"Antivenom"},{"ns":0,"exists":"","*":"Aortography"},{"ns":0,"exists":"","*":"Apheresis"},{"ns":0,"exists":"","*":"Auscultation"},{"ns":0,"exists":"","*":"Biopsy"},{"ns":0,"exists":"","*":"Biopsy
+        test"},{"ns":0,"exists":"","*":"Blood pressure"},{"ns":0,"exists":"","*":"Blood
+        test"},{"ns":0,"exists":"","*":"Body temperature"},{"ns":0,"exists":"","*":"Cancer
+        immunotherapy"},{"ns":0,"exists":"","*":"Cancer vaccine"},{"ns":0,"exists":"","*":"Cardiac
+        stress test"},{"ns":0,"exists":"","*":"Cardiac ventriculography"},{"ns":0,"exists":"","*":"Cardiopulmonary
+        resuscitation"},{"ns":0,"exists":"","*":"Cell therapy"},{"ns":0,"exists":"","*":"Cerebral
+        angiography"},{"ns":0,"exists":"","*":"Cervical conization"},{"ns":0,"exists":"","*":"Chelation
+        therapy"},{"ns":0,"exists":"","*":"Chemotherapy"},{"ns":0,"exists":"","*":"Chest
+        photofluorography"},{"ns":0,"exists":"","*":"Cold compression therapy"},{"ns":0,"exists":"","*":"Colonoscopy"},{"ns":0,"exists":"","*":"Colposcopy"},{"ns":0,"exists":"","*":"Combination
+        therapy"},{"ns":0,"exists":"","*":"Computed tomography"},{"ns":0,"exists":"","*":"Contrast-enhanced
+        ultrasound"},{"ns":0,"exists":"","*":"Coronary angiography"},{"ns":0,"exists":"","*":"Craniosacral
+        therapy"},{"ns":0,"exists":"","*":"Cryosurgery"},{"ns":0,"exists":"","*":"Cystoscopy"},{"ns":0,"exists":"","*":"Cytoluminescent
+        therapy"},{"ns":0,"exists":"","*":"Diffuse optical imaging"},{"ns":0,"exists":"","*":"Diffusion-weighted
+        imaging"},{"ns":0,"exists":"","*":"Diffusion tensor imaging"},{"ns":0,"exists":"","*":"Drug
+        therapy"},{"ns":0,"exists":"","*":"Echocardiography"},{"ns":0,"exists":"","*":"Electrical
+        impedance tomography"},{"ns":0,"exists":"","*":"Electrocardiography"},{"ns":0,"exists":"","*":"Electroconvulsive
+        therapy"},{"ns":0,"exists":"","*":"Electrocorticography"},{"ns":0,"exists":"","*":"Electroencephalography"},{"ns":0,"exists":"","*":"Electromyography"},{"ns":0,"exists":"","*":"Electroneuronography"},{"ns":0,"exists":"","*":"Electronystagmography"},{"ns":0,"exists":"","*":"Electrooculography"},{"ns":0,"exists":"","*":"Electroretinography"},{"ns":0,"exists":"","*":"Electrotherapy"},{"ns":0,"exists":"","*":"Endoluminal
+        capsule monitoring"},{"ns":0,"exists":"","*":"Endoscopic surgery"},{"ns":0,"exists":"","*":"Endoscopy"},{"ns":0,"exists":"","*":"Enzyme
+        replacement therapy"},{"ns":0,"exists":"","*":"Epidural"},{"ns":0,"exists":"","*":"Esophageal
+        motility study"},{"ns":0,"exists":"","*":"Evoked potential"},{"ns":0,"exists":"","*":"Extracorporeal
+        membrane oxygenation"},{"ns":0,"exists":"","*":"Facial rejuvenation"},{"ns":0,"exists":"","*":"Fluid
+        replacement therapy"},{"ns":0,"exists":"","*":"Fluoride therapy"},{"ns":0,"exists":"","*":"Fluoroscopy"},{"ns":0,"exists":"","*":"Functional
+        magnetic resonance imaging"},{"ns":0,"exists":"","*":"Gastroscopy"},{"ns":0,"exists":"","*":"Gene
+        therapy"},{"ns":0,"exists":"","*":"General anesthesia"},{"ns":0,"exists":"","*":"General
+        surgery"},{"ns":0,"exists":"","*":"Gynecologic ultrasonography"},{"ns":0,"exists":"","*":"Hand
+        surgery"},{"ns":0,"exists":"","*":"Heart rate"},{"ns":0,"exists":"","*":"Heat
+        therapy"},{"ns":0,"exists":"","*":"Hemilaminectomy"},{"ns":0,"exists":"","*":"Hemodialysis"},{"ns":0,"exists":"","*":"Hemofiltration"},{"ns":0,"exists":"","*":"Hormonal
+        therapy"},{"ns":0,"exists":"","*":"Hormone replacement therapy (menopause)"},{"ns":0,"exists":"","*":"Hydrotherapy"},{"ns":0,"exists":"","*":"Hyperbaric
+        oxygen therapy"},{"ns":0,"exists":"","*":"Image-guided surgery"},{"ns":0,"exists":"","*":"Immunization"},{"ns":0,"exists":"","*":"Immunosuppressive
+        therapy"},{"ns":0,"exists":"","*":"Inhalation therapy"},{"ns":0,"exists":"","*":"Insulin
+        potentiation therapy"},{"ns":0,"exists":"","*":"Insulin shock therapy"},{"ns":0,"exists":"","*":"Interventional
+        radiology"},{"ns":0,"exists":"","*":"Intravascular ultrasound"},{"ns":0,"exists":"","*":"Intravenous
+        therapy"},{"ns":0,"exists":"","*":"Intubation"},{"ns":0,"exists":"","*":"Knee
+        cartilage replacement therapy"},{"ns":0,"exists":"","*":"Laminectomy"},{"ns":0,"exists":"","*":"Laparoscopic
+        surgery"},{"ns":0,"exists":"","*":"Laparoscopy"},{"ns":0,"exists":"","*":"Laryngoscopy"},{"ns":0,"exists":"","*":"Laser
+        therapy"},{"ns":0,"exists":"","*":"List of surgical procedures"},{"ns":0,"exists":"","*":"Lithotomy"},{"ns":0,"exists":"","*":"Lithotriptor"},{"ns":0,"exists":"","*":"Lobotomy"},{"ns":0,"exists":"","*":"Local
+        anesthesia"},{"ns":0,"exists":"","*":"Low-dose chemotherapy"},{"ns":0,"exists":"","*":"Lymphangiography"},{"ns":0,"exists":"","*":"Magnetic
+        resonance imaging"},{"ns":0,"exists":"","*":"Magnetic therapy"},{"ns":0,"exists":"","*":"Magnetoencephalography"},{"ns":0,"exists":"","*":"Medical
+        imaging"},{"ns":0,"exists":"","*":"Medical inspection"},{"ns":0,"exists":"","*":"Monoclonal
+        antibody therapy"},{"ns":0,"exists":"","*":"Nebulizer"},{"ns":0,"exists":"","*":"Negative
+        Pressure Wound Therapy"},{"ns":0,"exists":"","*":"Neovaginoplasty"},{"ns":0,"exists":"","*":"Neuroimaging"},{"ns":0,"exists":"","*":"Nicotine
+        replacement therapy"},{"ns":0,"exists":"","*":"Obstetric ultrasonography"},{"ns":0,"exists":"","*":"Occupational
+        therapy"},{"ns":0,"exists":"","*":"Ophthalmoscopy"},{"ns":0,"exists":"","*":"Opiate
+        replacement therapy"},{"ns":0,"exists":"","*":"Oral rehydration therapy"},{"ns":0,"exists":"","*":"Otoscopy"},{"ns":0,"exists":"","*":"Oxygen
+        therapy"},{"ns":0,"exists":"","*":"Palliative care"},{"ns":0,"exists":"","*":"Palpation"},{"ns":0,"exists":"","*":"Particle
+        therapy"},{"ns":0,"exists":"","*":"Percussion (medicine)"},{"ns":0,"exists":"","*":"Phage
+        therapy"},{"ns":0,"exists":"","*":"Photodynamic therapy"},{"ns":0,"exists":"","*":"Phototerapy"},{"ns":0,"exists":"","*":"Physical
+        therapy"},{"ns":0,"exists":"","*":"Plasmapheresis"},{"ns":0,"exists":"","*":"Politzerization"},{"ns":0,"exists":"","*":"Positron
+        emission tomography"},{"ns":0,"exists":"","*":"Posturography"},{"ns":0,"exists":"","*":"Precordial
+        thump"},{"ns":0,"exists":"","*":"Proton therapy"},{"ns":0,"exists":"","*":"Psychotherapy"},{"ns":0,"exists":"","*":"Pulmonary
+        angiography"},{"ns":0,"exists":"","*":"Pulse"},{"ns":0,"exists":"","*":"Radiation
+        therapy"},{"ns":0,"exists":"","*":"Radiography"},{"ns":0,"exists":"","*":"Radiosurgery"},{"ns":0,"exists":"","*":"Regional
+        anesthesia"},{"ns":0,"exists":"","*":"Respiratory therapy"},{"ns":0,"exists":"","*":"SPECT"},{"ns":0,"exists":"","*":"Scintillography"},{"ns":0,"exists":"","*":"Screening
+        (medicine)"},{"ns":0,"exists":"","*":"Sigmoidoscopy"},{"ns":0,"exists":"","*":"Speech
+        therapy"},{"ns":0,"exists":"","*":"Spinal anesthesia"},{"ns":0,"exists":"","*":"Stem
+        cell treatments"},{"ns":0,"exists":"","*":"Stereotactic surgery"},{"ns":0,"exists":"","*":"Stool
+        test"},{"ns":0,"exists":"","*":"Symptomatic treatment"},{"ns":0,"exists":"","*":"Targeted
+        therapy"},{"ns":0,"exists":"","*":"Therapy"},{"ns":0,"exists":"","*":"Thermography"},{"ns":0,"exists":"","*":"Thrombosis
+        prophylaxis"},{"ns":0,"exists":"","*":"Topical anesthesia"},{"ns":0,"exists":"","*":"Tracheal
+        intubation"},{"ns":0,"exists":"","*":"Transcutaneous electrical nerve stimulation"},{"ns":0,"exists":"","*":"Ultrasonography"},{"ns":0,"exists":"","*":"Unsealed
+        source radiotherapy"},{"ns":0,"exists":"","*":"Urinalysis"},{"ns":0,"exists":"","*":"Vaccination"},{"ns":0,"exists":"","*":"Vaginoplasty"},{"ns":0,"exists":"","*":"Virtual
+        colonoscopy"},{"ns":0,"exists":"","*":"Virtual reality therapy"},{"ns":0,"exists":"","*":"Vision
+        therapy"},{"ns":0,"exists":"","*":"Vital signs"},{"ns":0,"exists":"","*":"Xenotransplantation"},{"ns":0,"*":"Dissociative
+        anesthesia"},{"ns":4,"exists":"","*":"Wikipedia:Citation needed"}]}}'
+  recorded_at: Tue, 29 Dec 2020 19:47:19 GMT
+recorded_with: VCR 6.0.0

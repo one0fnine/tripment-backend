@@ -210,6 +210,7 @@ GEM
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
     unicode-display_width (1.7.0)
+    vcr (6.0.0)
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -251,6 +252,7 @@ DEPENDENCIES
   rubocop-rspec (~> 2.1)
   typhoeus (~> 1.4)
   tzinfo-data
+  vcr (~> 6.0)
   web-console (>= 3.3.0)
   webmock (~> 3.11)
   webpacker (~> 4.0)

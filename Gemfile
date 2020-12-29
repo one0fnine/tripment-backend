@@ -30,11 +30,14 @@ gem 'oj', '~> 3.10'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # Debugging
   gem 'pry', '~> 0.13'
   gem 'pry-byebug', '~> 3.0'
   gem 'pry-rails', '~> 0.3'
 
+  # Testing
   gem 'rspec-rails', '~> 4.0'
+  gem 'vcr', '~> 6.0', require: false
   gem 'webmock', '~> 3.11', require: false
 end
 

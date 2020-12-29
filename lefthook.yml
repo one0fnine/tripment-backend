@@ -1,0 +1,16 @@
+pre-push:
+  commands:
+    gems-audit:
+      tags: backend security
+      run: bundle exec bundle-audit check --update
+    brakeman:
+      tags: backend security
+      run: bundle exec brakeman --rails6 --ensure-latest --no-pager --quiet
+
+pre-commit:
+  parallel: true
+  commands:
+    rubocop:
+      tags: backend style
+      exclude: "application.rb|routes.rb"
+      run: bundle exec rubocop -a --force-exclusion {staged_files}

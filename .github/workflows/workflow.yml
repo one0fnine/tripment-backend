@@ -1,0 +1,55 @@
+name: CI
+
+on: push
+
+jobs:
+  main:
+    name: Main
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:10
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: password
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Get current date
+        id: get-date
+        run: |
+          echo "::set-output name=date::$(/bin/date -u "+%Y%m%d")"
+        shell: bash
+
+      - name: Cache multiple paths
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache/rubocop_cache
+            ~/.local/share/ruby-advisory-db
+          key: ${{ runner.os }}-cache-all-${{ steps.get-date.outputs.date }}
+          restore-keys: |
+            ${{ runner.os }}-cache-all-
+
+      - name: Rubocop
+        run: bundle exec rubocop --format=github --parallel
+
+      - name: Audit
+        run: |
+          bash -c '[ ! -d ~/.local/share/ruby-advisory-db/.git ] && rm -rf ~/.local/share/ruby-advisory-db' || true
+          bundle exec bundle-audit check --update
+          bundle exec brakeman --rails6 --ensure-latest --no-pager --quiet --skip-files app/jobs/application_job.rb
+
+      - name: Run tests
+        run: bundle exec rake rspec
+        env:
+          RAILS_ENV: test

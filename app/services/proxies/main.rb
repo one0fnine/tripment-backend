@@ -60,7 +60,6 @@ module Proxies
         headers: default_headers,
         params: request_params,
         timeout: request_timeout,
-        connecttimeout: request_timeout,
         cache: cache
       }.compact
     end

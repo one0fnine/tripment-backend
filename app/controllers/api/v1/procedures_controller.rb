@@ -13,6 +13,8 @@ module Api
         head :accepted
       end
 
+      def dash; end
+
       private
 
       def fetch_procedures

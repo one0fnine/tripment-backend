@@ -49,6 +49,11 @@ jobs:
           bundle exec bundle-audit check --update
           bundle exec brakeman --rails6 --ensure-latest --no-pager --quiet --skip-files app/jobs/application_job.rb
 
+      - name: Prepare DB
+        run: bundle exec rails db:setup
+        env:
+          RAILS_ENV: test
+
       - name: Run tests
         run: bundle exec rspec spec/
         env:

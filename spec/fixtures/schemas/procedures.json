@@ -1,0 +1,15 @@
+{
+  "id": "file:/procedures.json#",
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "$ref": "file:/procedure.json#/definitions/data"
+      }
+    }
+  }
+}

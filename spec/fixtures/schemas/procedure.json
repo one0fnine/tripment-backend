@@ -1,0 +1,47 @@
+{
+  "id": "file:/procedure.json#",
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "$ref": "#/definitions/data"
+    }
+  },
+  "definitions": {
+    "data": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "attributes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "attributes": {
+          "$ref": "#/definitions/attributes"
+        },
+        "relationships": {
+          "type": "object"
+        }
+      }
+    },
+    "attributes": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

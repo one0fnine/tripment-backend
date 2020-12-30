@@ -11,8 +11,11 @@ gem 'rails', '~> 6.1'
 gem 'puma', '~> 4.1'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
+gem 'jsonapi-serializer', '~> 2.1'
+
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -41,6 +44,7 @@ group :development, :test do
 
   # Testing
   gem 'factory_bot_rails', '~> 6.1'
+  gem 'json_matchers', '~> 0.11', require: false
   gem 'rspec-rails', '~> 4.0'
   gem 'shoulda-matchers', '~> 4.4', require: false
   gem 'vcr', '~> 6.0', require: false

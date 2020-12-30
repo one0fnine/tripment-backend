@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_12_30_064730) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["name"], name: "index_procedures_on_name", opclass: :gin_trgm_ops, using: :gin
+    t.index ["name"], name: "uniq_name_idx", unique: true
   end
 
 end

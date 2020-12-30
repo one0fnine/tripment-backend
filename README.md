@@ -1,24 +1,19 @@
 # README
+## Tripment Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Description
+List of medical procedures.
 
-Things you may want to cover:
+### Tasks
+``` rails procedures::update ```
+### Endpoints
+* `GET /api/v1/procedures` - list of procedures
+* `PUT /api/v1/procedures/reload` - async refetching procedures
 
-* Ruby version
+### Linters & audit
+* rubocop
+* bundle-audit
+* brakeman
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Test
+`bundle exec rspec`

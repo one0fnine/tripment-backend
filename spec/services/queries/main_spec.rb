@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Queries::Main do
-  subject(:instance) { described_class.new([]) }
+  subject(:instance) { described_class.new }
 
   describe '#call' do
     context 'when #call is not defined' do

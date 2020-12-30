@@ -2,8 +2,8 @@
 
 module Queries
   class Main
-    def initialize(data)
-      @data = data
+    def initialize(args)
+      @args = args
     end
 
     def call
@@ -12,6 +12,6 @@ module Queries
 
     private
 
-    attr_reader :data
+    attr_reader :args
   end
 end

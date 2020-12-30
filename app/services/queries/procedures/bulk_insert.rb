@@ -4,7 +4,15 @@ module Queries
   module Procedures
     class BulkInsert < Main
       def call
-        ::Procedure.import data, validate_uniqueness: true, on_duplicate_key_ignore: true
+        model.import args, validate_uniqueness: true, on_duplicate_key_ignore: true
+      end
+
+      private
+
+      attr_reader :data
+
+      def model
+        ::Procedure
       end
     end
   end

@@ -69,5 +69,6 @@ RSpec.configure do |config|
 
   config.before do
     Typhoeus::Expectation.clear
+    FactoryBot.rewind_sequences
   end
 end

@@ -50,6 +50,6 @@ jobs:
           bundle exec brakeman --rails6 --ensure-latest --no-pager --quiet --skip-files app/jobs/application_job.rb
 
       - name: Run tests
-        run: bundle exec rake rspec
+        run: bundle exec rspec spec/
         env:
           RAILS_ENV: test

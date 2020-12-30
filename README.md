@@ -6,6 +6,8 @@ List of medical procedures.
 
 ### Tasks
 ``` rails procedures:update ```
+### URL
+**https://tripment-backend.herokuapp.com/**
 ### Endpoints
 * `GET /api/v1/procedures` - list of procedures
 * `GET /api/v1/procedures?filter[name]=blood` - filter by name

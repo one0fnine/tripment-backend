@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:10
+        image: postgres:13
         ports:
           - 5432:5432
         env:
@@ -50,11 +50,14 @@ jobs:
           bundle exec brakeman --rails6 --ensure-latest --no-pager --quiet --skip-files app/jobs/application_job.rb
 
       - name: Setup database
-        run: bundle exec rails db:setup
+        run: |
+          cp config/database.yml.github-actions config/database.yml
+          bundle exec rake db:create
+          bundle exec rake db:schema:load
         env:
           RAILS_ENV: test
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: password
+          POSTGRES_PASSWORD: postgres
 
       - name: Run tests
         run: bundle exec rspec

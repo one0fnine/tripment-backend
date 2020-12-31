@@ -4,16 +4,24 @@ module Queries
   module Procedures
     class Search < Main
       def call
-        return records unless args
-
-        records
-          .where('lower(name) like :name', name: "%#{args}%")
-          .order(order_by_similarity)
+        Rails.cache.fetch("procedures/#{cache_key_with_version}", expires_in: 15.minutes) do
+          args.blank? ? records : filtered_records
+        end
       end
 
       private
 
       attr_reader :name
+
+      def cache_key_with_version
+        args.to_s.hash
+      end
+
+      def filtered_records
+        records
+          .where('lower(name) like :name', name: "%#{args}%")
+          .order(order_by_similarity)
+      end
 
       def model
         ::Procedure

@@ -6,14 +6,15 @@ module Api
       before_action :fetch_procedures, only: :reload
 
       def index
-        render json: serializer_service, status: :ok
+        respond_to do |format|
+          format.html
+          format.json { render json: serializer_service, status: :ok }
+        end
       end
 
       def reload
         head :accepted
       end
-
-      def dash; end
 
       private
 

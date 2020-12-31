@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'Procedures', type: :request do
   let(:params) { {} }
-  let(:headers) { {} }
+  let(:headers) { { 'CONTENT_TYPE': 'application/json', 'ACCEPT': 'application/json' } }
 
   describe '#index' do
     before do

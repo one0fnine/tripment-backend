@@ -6,7 +6,10 @@ const Dash  = () => {
   useEffect(() => { fetchData(); }, []);
 
   const fetchData = async () => {
-    const response = await fetch('api/v1/procedures');
+    const response = await fetch('api/v1/procedures', { headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }});
     const result = await response.json();
     setData(result.data);
   }

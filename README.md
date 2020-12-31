@@ -14,6 +14,8 @@ List of medical procedures.
 * `PUT /api/v1/procedures/reload` - async refetching procedures
 
 ### Docker
+* `docker-compose run --rm runner` - to manage rails app container
+* `docker-compose up rails` - to start both rails app and postgresql
 ### Linters & audit
 * rubocop
 * bundle-audit

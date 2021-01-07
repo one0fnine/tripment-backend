@@ -19,7 +19,7 @@ module Queries
 
       def filtered_records
         records
-          .where('lower(name) like :name', name: "%#{args}%")
+          .where('lower(name) like :name', name: "%#{args.downcase}%")
           .order(order_by_similarity)
       end
 

@@ -1,0 +1,5 @@
+export const SHOW_LOADER = 'SHOW_LOADER'
+export const HIDE_LOADER = 'HIDE_LOADER'
+export const FETCH_DATA = 'FETCH_DATA'
+export const UPDATE_DATA = 'UPDATE_DATA'
+export const FILTER_DATA = 'FILTER_DATA'

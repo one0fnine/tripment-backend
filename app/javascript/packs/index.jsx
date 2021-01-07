@@ -4,12 +4,15 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Dash from 'components/Dash'
+import App from 'components/App'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ApiState from '../contexts/Api'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Dash />,
-    document.body.appendChild(document.createElement('div')),
+    <ApiState>
+      <App />
+    </ApiState>,
+    document.body.appendChild(document.createElement('div'))
   )
 })
